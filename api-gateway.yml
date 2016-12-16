@@ -17,7 +17,9 @@ authserver:
 # requests using zuul
 zuul:
   routes:
-    compute:/api/compute/**
+    compute:
+          path:/api/compute/**
+          serviceId: client-ribbon
     user-webservice: /api/user/**
     task-webservice: /api/task/**
     web-portal: /**
