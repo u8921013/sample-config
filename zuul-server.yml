@@ -1,0 +1,18 @@
+zuul:
+      sensitiveHeaders:
+      routes:
+           login:
+               url: http://login-server:80
+           reader:
+               url: http://readium-server:80
+           auth:
+               url: http://auth-server:8888
+           backstage:
+               url: http://backstage-server:80
+           config:
+               url:  http://config-server:7001
+ribbon:
+     eureka:
+          enabled: false
+server:
+       port:8080
